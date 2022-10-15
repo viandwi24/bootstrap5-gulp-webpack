@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ app.name }}</title>
+    <!-- required styles -->
+    <link rel="stylesheet" href="{{ 'css/viandwi24.bootstrap.css'|dist }}"> <!-- viandwi24 main styles -->
+</head>
+<body class="auto-init {% if layout %}{{ layout }}{% else %}sidebar-fixed navbar-fixed{% endif %}">
+    <div id="app" class="app">
+        <div class="container-fluid main-container">
+            <main class="main">
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+    </div>
+
+    <!-- required scripts -->
+    <script src="https://unpkg.com/@popperjs/core@2"></script> <!-- bootstrap dependencies -->
+    <script src="{{ 'js/viandwi24.bootstrap.js'|dist }}"></script>
+    <!-- custom scripts -->
+</body>
+</html>
