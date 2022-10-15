@@ -115,13 +115,13 @@ gulp.task('watching', gulp.series('css:lint', 'js:build', 'css:build', 'html:bui
             baseDir: "./",
             index: "index.html",
         },
-        middleware: function(req, res, next) {
-            if (req.url === '/') {
-                res.writeHead(301, { Location: '/pages/index.html' });
-                res.end();
-            }
-            return next();
-        }
+        // middleware: function(req, res, next) {
+        //     if (req.url === '/') {
+        //         res.writeHead(301, { Location: '/pages/index.html' });
+        //         res.end();
+        //     }
+        //     return next();
+        // }
     });
     // gulp.watch("./src/scripts/**/*.js", gulp.series('js:build'));
     // gulp.watch("./src/sass/**/*.scss", gulp.series('css:lint', 'css:build'));
